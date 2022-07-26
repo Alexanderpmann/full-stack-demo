@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "df2bcea1-896b-42ba-b74f-85f0f6a42361",
+		"name": "July 2022 full stack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22097141"
+	},
+	"item": [
+		{
+			"name": "Create game",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Stardew Valley",
+							"type": "text"
+						},
+						{
+							"key": "art",
+							"value": "https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_auto/ncom/en_CA/games/switch/s/stardew-valley-switch/hero",
+							"type": "text"
+						},
+						{
+							"key": "minPlayers",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/games/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"games",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all games",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/games",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One Game",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/games/62de14558f16382991d4a453",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"games",
+						"62de14558f16382991d4a453"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit game",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Elden Ring",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/games/update/62de15818f16382991d4a463",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"games",
+						"update",
+						"62de15818f16382991d4a463"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Game",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/games/delete/62de14558f16382991d4a453",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"games",
+						"delete",
+						"62de14558f16382991d4a453"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
